@@ -591,40 +591,52 @@ details[open] summary {
 
 
 
-/* === ADAPTACIÓN MÓVIL PARA SECCIÓN DE BIENVENIDA === */
+/* === FIJAR BIENVENIDA EN MÓVIL - 100% FUNCIONAL === */
 @media (max-width: 768px) {
   .entrada {
-    background-attachment: scroll !important; /* Evita problemas en móviles */
-    background-position: center top; /* Ajusta el enfoque */
-    min-height: 70vh; /* Reduce altura en móviles */
+    background-image: url('https://img77.uenicdn.com/image/upload/v1547216447/service_images/shutterstock_572508496.jpg') !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-attachment: scroll !important;
+    height: 70vh !important;
+    min-height: 500px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .overlay {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
+    text-align: center !important;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(255,192,203,0.3)) !important;
   }
 
   .overlay h1 {
-    font-size: 3.5rem !important;     /* Más pequeño */
-    -webkit-text-stroke: 1.5px #000000 !important;
-    text-stroke: 1.5px #000000 !important;
+    font-size: 3.2rem !important;
+    -webkit-text-stroke: 1.2px #000 !important;
+    text-stroke: 1.2px #000 !important;
     letter-spacing: 1px !important;
-    text-align: center;
-    padding: 0 20px;
-    line-height: 1.2;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    padding: 0 15px !important;
+    word-break: break-word !important;
   }
 }
 
 @media (max-width: 480px) {
   .overlay h1 {
-    font-size: 2.8rem !important;     /* Aún más pequeño en pantallas muy pequeñas */
-    -webkit-text-stroke: 1px #000000 !important;
-    text-stroke: 1px #000000 !important;
+    font-size: 2.5rem !important;
+    -webkit-text-stroke: 1px #000 !important;
+    text-stroke: 1px #000 !important;
   }
 }
 
-/* Asegura que el fondo cubra bien sin distorsionar */
-.entrada {
-  background-attachment: fixed; /* Solo en desktop */
-}
-
-@supports (-webkit-touch-callout: none) {
-  .entrada {
-    background-attachment: scroll; /* Fuerza scroll en iOS */
-  }
+/* === EVITAR CACHÉ EN DESARROLLO === */
+.entrada, .overlay, .overlay h1 {
+  transition: none !important;
 }
