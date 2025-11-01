@@ -82,7 +82,7 @@ header {
 
 /* === ENTRADA === */
 .entrada {
-  height: 70vh;
+  height: 100%;
   background-image: url('https://img77.uenicdn.com/image/upload/v1547216447/service_images/shutterstock_572508496.jpg');
   background-size: cover;
   background-position: center;
@@ -581,4 +581,5 @@ details[open] summary {
     opacity: 1;
     visibility: visible;
   }
+
 }
