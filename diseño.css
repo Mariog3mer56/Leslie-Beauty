@@ -591,28 +591,18 @@ details[open] summary {
 
 
 
-/* === FIJAR BIENVENIDA EN MÓVIL - 100% FUNCIONAL === */
+/* === BIENVENIDA MÓVIL - SIN ROMPER ANIMACIONES === */
 @media (max-width: 768px) {
   .entrada {
-    background-image: url('https://img77.uenicdn.com/image/upload/v1547216447/service_images/shutterstock_572508496.jpg') !important;
     background-size: cover !important;
     background-position: center top !important;
     background-attachment: scroll !important;
-    height: 70vh !important;
-    min-height: 500px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    min-height: 70vh !important;
+    height: auto !important;
   }
 
   .overlay {
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
     padding: 20px !important;
-    text-align: center !important;
     background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(255,192,203,0.3)) !important;
   }
 
@@ -623,8 +613,6 @@ details[open] summary {
     letter-spacing: 1px !important;
     line-height: 1.1 !important;
     margin: 0 !important;
-    padding: 0 15px !important;
-    word-break: break-word !important;
   }
 }
 
@@ -632,11 +620,5 @@ details[open] summary {
   .overlay h1 {
     font-size: 2.5rem !important;
     -webkit-text-stroke: 1px #000 !important;
-    text-stroke: 1px #000 !important;
   }
-}
-
-/* === EVITAR CACHÉ EN DESARROLLO === */
-.entrada, .overlay, .overlay h1 {
-  transition: none !important;
 }
